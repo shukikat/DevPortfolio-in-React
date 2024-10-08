@@ -9,7 +9,8 @@ import Error from './pages/Error';
 //import Home from './pages/Home';
 import Contact from './pages/Contact';
 import AboutMe from './pages/AboutMe';
-import Project from './pages/Project';
+import Project from './pages/Portfolio';
+import Resume from './pages/Resume';
 
 // Define the accessible routes, and which components respond to which URL--within app you have parent '/' and children
 const router = createBrowserRouter([
@@ -27,13 +28,19 @@ const router = createBrowserRouter([
         element: <AboutMe />,
       },
       {
-        path: '/Project',
-        element: <Project/>,
+        path: '/Portfolio',
+        element: <Portfolio/>,
       },
+
       {
         path: '/Contact',
         element: <Contact />,
       },
+
+      {
+        path:'/Resume',
+        element: <Resume/>,
+      }
     ],
   },
 ]);

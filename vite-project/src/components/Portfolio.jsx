@@ -1,9 +1,7 @@
 import Header from '../Header'
 
-export default function Contact () {
-
-    return (
-
+export default function Portfolio (){
+    return( 
         <Header/>
     )
 }
