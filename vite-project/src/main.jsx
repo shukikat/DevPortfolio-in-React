@@ -6,10 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App';
 import Error from './pages/Error';
-import Home from './pages/Home';
+//import Home from './pages/Home';
 import Contact from './pages/Contact';
-import About from './pages/About';
-import Blog from './pages/Blog';
+import AboutMe from './pages/AboutMe';
+import Project from './pages/Project';
 
 // Define the accessible routes, and which components respond to which URL--within app you have parent '/' and children
 const router = createBrowserRouter([
@@ -20,15 +20,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <AboutMe />,
       },
       {
-        path: '/About',
-        element: <About />,
+        path: '/AboutMe',
+        element: <AboutMe />,
       },
       {
-        path: '/Blog',
-        element: <Blog />,
+        path: '/Project',
+        element: <Project/>,
       },
       {
         path: '/Contact',
