@@ -16,18 +16,18 @@ function Nav() {
       </li>
       <li className="nav-item">
         <Link
-          to="/AboutMe"
+          to="/Contact"
           
-          className={currentPage === '/AboutMe' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact
         </Link>
       </li>
       <li className="nav-item">
         <Link
-          to="/Contact"
+          to="/Resume"
           
-          className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
         >
           Resume
         </Link>
@@ -45,4 +45,4 @@ function Nav() {
   );
 }
 
-export default NavTabs;
+export default Nav;
