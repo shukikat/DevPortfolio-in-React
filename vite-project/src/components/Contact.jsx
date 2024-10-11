@@ -1,5 +1,6 @@
 import Header from './Header'
 import {useState} from 'react'
+//import {MouseEvent} from 'react'
 
 export default function Contact () {
     const [name, setName]=useState('');
@@ -7,28 +8,48 @@ export default function Contact () {
     const [message, setMessage]=useState('');
 
     const handleChange = (event)=>{
-        const name=event.target.name;
-        const email=event.target.email;
-        const message=event.target.message;
+        const {name, value}=event.target;
+        if (name==='name'){
+            setName(value);
+        }
+
+        else if (name==='email') {
+            setEmail(value);
+        }
+
+        else if (name==="message") {
+            setMessage(value);
+        }
+        
     }
 
 
     const handleSubmit = (event)=> {
         event.preventDefault();
+
         //something should happen here!
+        if (!name || !email || !message ) {
+            alert ("Must have input")
+            return;
+        }
+
+        
+
+
 
     }
     return (
 
+        <div>
         <header>
         <Header/>
-        </header>>
+        </header>
 
         <main>
             <h1>Contact</h1>
          
          <form onSubmit={handleSubmit}>
-
+           <label>Name </label>
             <input
                 value={name}
                 onChange={handleChange}
@@ -38,12 +59,13 @@ export default function Contact () {
                 
                 />
             
-
+            
+             <label>Email </label>
             <input
 
                 value={email}
                 onChange={handleChange}
-                type="text"
+                type="email"
                 name='email'
 
                 
@@ -51,11 +73,10 @@ export default function Contact () {
 
                 />
             
-
-            <input 
+            <label> Message </label>
+            <textarea
                 value={message}
                 onChange={handleChange}
-                type="text"
                 name='message'
                 
                 />
@@ -76,6 +97,7 @@ export default function Contact () {
          </form>
 
          </main>
+         </div>
 
         
     )
