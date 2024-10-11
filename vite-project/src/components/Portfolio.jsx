@@ -1,14 +1,14 @@
 import Header from './Header'
 
 
-export default function Portfolio (){
-    return( 
+export default function Portfolio() {
+    return (
 
         <>
-       
 
-        <Header/>
-        <h1>Portfolio</h1>
+
+
+            <h1>Portfolio</h1>
 
 
         </>
