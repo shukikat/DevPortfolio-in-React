@@ -1,4 +1,4 @@
-import Header from './Header'
+import Footer from './Footer'
 
 export default function AboutMe() {
     return (
@@ -19,6 +19,7 @@ export default function AboutMe() {
           bibendum congue. Pellentesque semper, lectus non ullamcorper iaculis,
           est ligula suscipit velit, sed bibendum turpis dui in sapien.
         </p>
+      
       </div>
     );
   }
