@@ -3,7 +3,9 @@ import Header from './Header'
 export default function AboutMe() {
     return (
       <div>
+        <header>
         <Header/>
+        </header>
         <h1>About Me</h1>
         <p>
           Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.

@@ -28,6 +28,7 @@ export default function Contact () {
             <h1>Contact</h1>
          
          <form onSubmit={handleSubmit}>
+
             <input
                 value={name}
                 onChange={handleChange}
@@ -63,6 +64,7 @@ export default function Contact () {
                 <button type="Submit">
 
                     Submit 
+                    
                 </button>
            
 
@@ -73,7 +75,9 @@ export default function Contact () {
 
          </form>
 
-        </main>
+         </main>
+
+        
     )
 }
 
