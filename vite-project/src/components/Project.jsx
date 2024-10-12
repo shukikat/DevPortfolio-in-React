@@ -1,51 +1,29 @@
 
-import springImage from '../images/spring.jpg';
-import meditation from '../images/meditation.jpg';
-import foliage from '../images/foliage.png';
-import horse from '../images/horse.jpg';
-import random from '../images/background.jpg';
-
-function Project1() {
-    return (
-        <img src={springImage} alt='Spring'/>
-    );
+function Project({title, image, link }) {
     
-}
-
-function Project2() {
-    return (
-        <img src={meditation} alt='Meditation'/>
-    );
     
-}
-
-
-function Project3() {
-    return (
-        <img src={foliage} alt='Foliage'/>
-
     
+    return (
+   
+        <div>
+            <h2>{title}</h2>
+          <img src={image} alt={title}/>
+          
+          <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>
+
+
+        </div>
+
+
+        
+
+
     );
 
-    
-}
 
-function Project4() {
-    return (
-        <img src={horse} alt='Horse'/>
+      
 
-    
-    );
 
-    
-}
-
-function Project5() {
-    return (
-        <img src={random} alt='Random'/>
-
-    
-    );
 
     
 }
@@ -57,8 +35,4 @@ function Project5() {
 
 
 
-export {Project1}
-export{Project2}
-export{Project3}
-export{Project4}
-export{Project5}
+export {Project}
