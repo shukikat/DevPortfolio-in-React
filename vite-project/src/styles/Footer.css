@@ -1,13 +1,4 @@
-/* .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: black;
-    text-align: center;
-    
-} */
+
 
 .footer {
 
@@ -16,12 +7,16 @@
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    background-color: hotpink;
-    color: black;
+    background: #37393A;
+    color: white;
     padding: 10px;
     height: 75px;
     
     
+}
+
+.a-tag {
+    color: white;
 }
 
 .footer-info-left, 

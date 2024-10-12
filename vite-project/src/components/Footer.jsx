@@ -1,4 +1,5 @@
 import '../styles/Footer.css';
+import react from 'react'
 
 
 
@@ -19,18 +20,18 @@ export default function Footer() {
       <hr /> 
 
         <section className="footer-info-left">
-            <a href="https://github.com/shukikat" target="_blank" rel="noopener noreferrer">Github Repo</a>
+            <a href="https://github.com/shukikat" target="_blank" rel="noopener noreferrer"className="a-tag">Github Repo</a>
 
         </section>
 
         <section className="footer-info-center">
-            <a href="https://www.linkedin.com/in/shukikathuria/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/shukikathuria/" target="_blank" rel="noopener noreferrer" className="a-tag">LinkedIn</a>
           </section>
 
         <section className="footer-info-right">
 
         
-            <a href="https://www.facebook.com/shuki.kathuria/?locale=gn_PY" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.facebook.com/shuki.kathuria/?locale=gn_PY" target="_blank" rel="noopener noreferrer" className="a-tag">Facebook</a>
           </section>
 
   
