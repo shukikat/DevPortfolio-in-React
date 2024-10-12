@@ -1,3 +1,4 @@
+import '../styles/Project.css'
 
 function Project({title, image, link }) {
     
@@ -5,14 +6,22 @@ function Project({title, image, link }) {
     
     return (
    
+        <main className="main-contact">
         <div>
-            <h2>{title}</h2>
+            
+         <h2>{title}</h2>
+         <div className="bordercheck">
           <img src={image} alt={title}/>
           
           <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>
+          </div>
+          
+          </div>
+
+          </main>
 
 
-        </div>
+        
 
 
         
