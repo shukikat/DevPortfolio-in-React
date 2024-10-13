@@ -1,4 +1,5 @@
 import Header from './Header'
+import '../styles/Resume.css'
 
 const resumePDF = 'http://localhost:5173/src/files/Resume.pdf'
 
@@ -18,19 +19,35 @@ export default function Resume() {
   }
 
   return (
+
+
     <div>
 
-      <h1>Resume</h1>
+      <main className='main-resume'>
 
-      <button onClick={() =>
-        downloadFileURL(resumePDF)}>
-        SK Resume </button>
+        
+
+        <h1>Resume</h1>
+
+        <aside className="resume-content">
+
+        <a href={resumePDF} download target="_blank" rel="noopener noreferrer">
+          Download My Resume
+
+        </a>
+
+        
 
 
 
 
-      <p> CSS</p>
-      <p>HTML</p>
+        <p> CSS</p>
+        <p>HTML</p>
+        <p>Javascript</p>
+
+        </aside>
+
+      </main>
     </div>
   );
 }

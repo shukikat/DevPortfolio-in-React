@@ -1,12 +1,16 @@
 import Header from './Header'
 import { useState } from 'react'
-//import {MouseEvent} from 'react'
 import '../styles/Contact.css'
 
 export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [errorMessage, setErrorMessages] = useState ({
+        name:'',
+        email:'',
+        message:'',
+    });
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -22,7 +26,14 @@ export default function Contact() {
             setMessage(value);
         }
 
-    }
+        if (errorMessage) {
+            setErrorMessages((prevState) => ({
+                ...prevState,
+                [name]:'',
+            }));
+        };
+
+    };
 
 
     const handleSubmit = (event) => {
@@ -30,15 +41,41 @@ export default function Contact() {
 
         //something should happen here!
         if (!name || !email || !message) {
-            alert("Must have input")
+            alert("All fields are required");
             return;
         }
 
+        alert("Form submitted successfully");
+        setName('');
+        setEmail('');
+        setMessage('');
 
 
+    };
+
+    //needed to handle this to account for error message with mouseout
+    const handleBlur =(event) => {
+        const { name, value } = event.target;
+        if (value.trim() === '') {
+            setErrorMessages((prevState) => ({
+                ...prevState,
+                [name]:`${name.charAt(0).toUpperCase() + name.slice(1)} is required`
+            }));
+        }
+
+        else {
+            setErrorMessages ((prevState) => ({
+                ...prevState,
+                [name]:''
+
+            }));
+        }
+                
+
+        };
+        
 
 
-    }
     return (
 
         <div>
@@ -46,7 +83,7 @@ export default function Contact() {
 
             <main className='main-contact'>
                 <div className="mainheader">
-                <h1>Contact</h1>
+                    <h1>Contact</h1>
                 </div>
 
                 <form onSubmit={handleSubmit}>
@@ -54,18 +91,20 @@ export default function Contact() {
                     <input
                         value={name}
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         type="text"
                         name='name'
 
 
                     />
-
+                    {errorMessage.name && <span style={{ color: 'red' }}>{errorMessage.name}</span>}
 
                     <label>Email </label>
                     <input
 
                         value={email}
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         type="email"
                         name='email'
 
@@ -74,16 +113,20 @@ export default function Contact() {
 
                     />
 
+                    {errorMessage.email && <span style={{ color: 'red' }}>{errorMessage.email}</span>}
+
                     <label> Message </label>
                     <textarea
                         value={message}
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         name='message'
 
                     />
 
-
-                    <button type="Submit">
+                    {errorMessage.message && <span style={{ color: 'red' }}>{errorMessage.message}</span>}
+                    
+                    <button type="submit">
 
                         Submit
 
@@ -101,7 +144,8 @@ export default function Contact() {
         </div>
 
 
-    )
+    );
+
 }
 
 //TO DO : LOTS! Need logic for blank inputs

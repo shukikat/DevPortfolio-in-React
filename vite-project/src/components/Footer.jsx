@@ -20,7 +20,7 @@ export default function Footer() {
       <hr /> 
 
         <section className="footer-info-left">
-            <a href="https://github.com/shukikat" target="_blank" rel="noopener noreferrer"className="a-tag">Github Repo</a>
+            <a href="https://github.com/shukikat" target="_blank" rel="noopener noreferrer"className="a-tag">Github</a>
 
         </section>
 
