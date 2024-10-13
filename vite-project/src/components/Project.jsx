@@ -11,7 +11,7 @@ function Project({title, image, link }) {
             
          <h2>{title}</h2>
          <div className="bordercheck">
-          <img src={image} alt={title}/>
+          <img src={image} alt={title} className='img-portfolio'/>
           
           <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>
           </div>
