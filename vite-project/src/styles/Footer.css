@@ -1,0 +1,50 @@
+
+
+.footer {
+
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background: #37393A;
+    color: white;
+    padding: 10px;
+    height: 75px;
+    
+    
+}
+
+.a-tag {
+    color: white;
+}
+
+.footer-info-left, 
+.footer-info-center, 
+.footer-info-right {
+    display: flex;
+    align-items: center
+}
+
+
+.footer-info-left {
+    justify-content: flex-start;
+    padding:50px;
+}
+
+.footer-info-center {
+    justify-content: center; 
+    padding:50px;
+}
+
+
+.footer-info-right {
+    justify-content: flex-end;
+    padding:50px; 
+}
+
+
+
+
+
+

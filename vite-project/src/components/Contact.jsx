@@ -1,6 +1,7 @@
 import Header from './Header'
 import { useState } from 'react'
 //import {MouseEvent} from 'react'
+import '../styles/Contact.css'
 
 export default function Contact() {
     const [name, setName] = useState('');
@@ -43,8 +44,10 @@ export default function Contact() {
         <div>
 
 
-            <main>
+            <main className='main-contact'>
+                <div className="mainheader">
                 <h1>Contact</h1>
+                </div>
 
                 <form onSubmit={handleSubmit}>
                     <label>Name </label>
