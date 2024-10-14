@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 //import {nav} from '../styles/Navigation.css'
+import '../styles/Navigation.css'
 
 
 
