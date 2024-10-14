@@ -1,3 +1,16 @@
+
+
 .nav-tabs {
-    display: inline;
-  }
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    
+}
+
+.nav-item {
+  margin: 0 15px;
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: bolder;
+  
+}
