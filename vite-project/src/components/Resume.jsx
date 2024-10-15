@@ -36,14 +36,12 @@ export default function Resume() {
 
         </a>
 
-        
-
-
-
+     <h2 className="headertwo"> Proficiencies</h2>
 
         <p> CSS</p>
         <p>HTML</p>
         <p>Javascript</p>
+        <p>SQL</p>
 
         </aside>
 

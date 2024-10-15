@@ -13,7 +13,7 @@ function Project({title, image, link }) {
          <div className="bordercheck">
           <img src={image} alt={title} className='img-portfolio'/>
           
-          <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>
+          <a href={link} target="_blank" rel="noopener noreferrer">View GitHub Repo</a>
           </div>
           
           </div>

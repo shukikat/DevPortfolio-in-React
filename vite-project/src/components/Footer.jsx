@@ -1,17 +1,7 @@
 import '../styles/Footer.css';
 import react from 'react'
 
-
-
-
-// export default function Footer () {
-//   return (
-//     <footer className="footer">
-//         <p>This is my footer</p>
-//         <a href='/'>Github</a>
-//             </footer> );
-// }
-
+//separated each social media links and contacts into their own section
 
 export default function Footer() {
   return (
