@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navigation.css'
 
 
-
+//ensures the page that user routed to by clicking on selected link
 
 function Nav() {
   const currentPage = useLocation().pathname;

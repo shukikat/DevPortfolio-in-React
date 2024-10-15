@@ -2,6 +2,8 @@ import Header from './Header'
 import { useState } from 'react'
 import '../styles/Contact.css'
 
+//set initial state to blank for name, email, and message fields, error message
+
 export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -12,6 +14,7 @@ export default function Contact() {
         message:'',
     });
 
+    //function to handle input when values are added to inputs + error messages or blank inputs
     const handleChange = (event) => {
         const { name, value } = event.target;
         if (name === 'name') {
@@ -35,11 +38,10 @@ export default function Contact() {
 
     };
 
-
+//if submit button is clicked with no inputs user sees an error message + confirmation when form submitted
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        //something should happen here!
         if (!name || !email || !message) {
             alert("All fields are required");
             return;
@@ -53,7 +55,7 @@ export default function Contact() {
 
     };
 
-    //needed to handle this to account for error message with mouseout
+    //needed to handle this to account for error message with mouseout of input field
     const handleBlur =(event) => {
         const { name, value } = event.target;
         if (value.trim() === '') {

@@ -4,9 +4,7 @@
     display:flex;
 }
 
-div {
-    border: 5px solid red;
-}
+
 
 .about-me-text, .about-me-image {
     flex: 1;
@@ -60,11 +58,10 @@ h1 {
     background: #D6C9C9;
     min-height: 100vh;
     
+    
 }
 
-aside {
-    border: 5px solid cyan;
-}
+
 
 
 
