@@ -1,8 +1,7 @@
 import Header from './Header'
 import '../styles/Resume.css'
 
-const resumePDF = 'http://localhost:5173/src/files/Resume.pdf'
-
+const resumePDF = '../src/files/Resume.pdf'
 export default function Resume() {
 
   const downloadFileURL = (url) => {
